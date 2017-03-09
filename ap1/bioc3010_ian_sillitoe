@@ -1,0 +1,24 @@
+Evolutionary traces of single domains are as important as that of protein itself.
+Structures are more conserved than sequences and allow a longer evolutionary trace.
+Quantify similarity between protein structures
+RMSD-root means squard devisation
+
+Algorithms to compare:
+	1.decompose structure into vectorised secondary units, and abstract the relation between vectors into graphs. Then find common maps. Fast to rule out homology but does not include toplogical information.
+	2.By contact maps, pairwised distance betweeen residues. Also can be acquired from NMR.
+	3. indels and dynamic programming: produce a sequence alignment to seed a structural alignment
+Algorithms:
+	SSAP, DALI?
+	CATH database: hiearchial, effectively a metric between superfamilies
+
+Evolution:Divergent or Convergent?
+	rule of thumb: RMSD<4A ,SSAP>80
+	distubution of CATH database: 
+	80 million sequences
+	2738 cath superfamilies. 
+		100 SF's include 40mn seqs
+		2638 include the rest 40mn.
+Common : duplication,mutation,fusion/embelishment,oligomerisation
+	The mosaic theory of protein evolution
+
+(Structural-> conservation ->Function) mapping is complex 
