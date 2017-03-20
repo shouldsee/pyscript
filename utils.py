@@ -1,6 +1,7 @@
 import numpy as np
 import math as m
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 from scipy.integrate import odeint
 from functools import reduce
 import csv
