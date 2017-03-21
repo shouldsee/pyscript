@@ -1,3 +1,8 @@
+#import sys
+#import os
+#sys.path.append(os.path.abspath('..'))
+#from utils import *
+
 import numpy as np
 import math as m
 import matplotlib.pyplot as plt
@@ -5,10 +10,11 @@ import matplotlib.patches as mpatches
 from scipy.integrate import odeint
 from functools import reduce
 import csv
+import time
+import pickle
+import copy
 # %matplotlib inline
 from scipy.interpolate import *
-
-
 from IPython.display import HTML
 
 tog='''<script>
@@ -26,7 +32,17 @@ $( document ).ready(code_toggle);
 <form action="javascript:code_toggle()"><input type="submit" value="Click here to toggle on/off the raw code."></form>''';
 HTML(tog)
 
+base2bin=lambda data,scale,num_of_bits: bin(int(data, scale))[2:].zfill(num_of_bits);
+hex2bin=lambda hexdata,num_of_bits: base2bin(hexdata,16,num_of_bits);
 
+def csv2dat(fname):
+    dat=[];
+    with open(fname, 'r') as csvfile:
+        spamreader = csv.reader(csvfile, delimiter='\t')
+        for row in (spamreader):
+            dat+=[row];
+
+    return np.array(dat);
 
 def init_esplot():
     plt.close('all');
