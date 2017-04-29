@@ -1,0 +1,6 @@
+IP_ubuntu:34.208.213.71
+ssh -i $sshkey ubuntu@34.208.213.71
+ssh -i $sshkey ubuntu@172.31.12.41
+
+ssh -i $sshkey ubuntu@52.32.139.220
+public IP: 52.32.139.220
